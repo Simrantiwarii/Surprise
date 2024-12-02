@@ -203,15 +203,66 @@
                 <button onclick="loadImagesPage()">Yesssssssss babe 😍</button>
             `;
         }
+        function noResponse() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <h1>Thode to buddhu abhi bhi ho tum 😏</h1>
+                <button onclick="loadCutePage()">I Agree 🫣</button>
+            `;
+        }
 
+        function loadCutePage() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <h1>Do you think I am cute? 😌</h1>
+                <div class="button-group">
+                    <button onclick="loadHotPage()">Haa mere bachhe 💖</button>
+                    <button onclick="loadHotPage()">Definitely Yesss cutieee👸🏻<br><span class="small-text">(Aise kaise no bol doge)</span></button>
+                </div>
+            `;
+        }
+
+        function loadHotPage() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <h1>Do you think I am hot? 🔥</h1>
+                <div class="button-group">
+                    <button onclick="loadLovePage()">Yess sweetheart😘</button>
+                    <button onclick="loadLovePage()">Hella Hot jaaneman 🥵<br><span class="small-text">(Na ka to sawal hi nahi banta)</span></button>
+                </div>
+            `;
+        }
+
+        function loadLovePage() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <h1>Do you love me? ❤️</h1>
+                <div class="button-group">
+                    <button onclick="loadFeelingsPage()">ALWAYS BABY 🥰</button>
+                    <button onclick="loadFeelingsPage()"> Of course jaaan 💕</button>
+                </div>
+            `;
+        }
+
+        function loadFeelingsPage() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <h1>Do you wanna know my feelings? 😍</h1>
+                <div class="button-group">
+                    <button onclick="loadFinalPage()">Yes, My Love 💌</button>
+                    <button onclick="loadFinalPage()">Obviously 🌹</button>
+                </div>
+            `;
+        }
+        
         function loadImagesPage() {
             const content = document.getElementById('content');
             content.innerHTML = `
                 <div class="journey-section">
                     <h1>a little of our journey in two images, a lot to cover 🧿♾️</h1>
                     <div class="image-gallery">
-                        <img src="images/Farewell.jpeg" alt="Image 1" class="journey-image">
-                        <img src="images/IMG_1767.JPG" alt="Image 2" class="journey-image">
+                        <img src="/Users/simran/Downloads/Farewell.jpeg" alt="Image 1" class="journey-image">
+                        <img src="/Users/simran/Downloads/IMG_1767.JPG" alt="Image 2" class="journey-image">
                     </div>
                 </div>
                 <button onclick="loadFinalPage()">Move Forward ❤️</button>
