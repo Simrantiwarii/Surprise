@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anniversary Special</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Roboto:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #fff5f7;
+            text-align: center;
+            color: #333;
+            transition: background-color 0.5s;
+            overflow-x: hidden;
+        }
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: #ff6b81;
+            margin-top: 20px;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 800px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #ff6b81;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Roboto', sans-serif;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        button:hover {
+            background-color: #ff4757;
+            transform: scale(1.1);
+        }
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .small-text {
+            font-size: 0.8rem;
+            color: #888;
+        }
+        #content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .heart {
+            color: #ff6b81;
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes heartbeat {
+            0%, 20%, 50%, 80%, 100% {
+                transform: scale(1);
+            }
+            40% {
+                transform: scale(1.1);
+            }
+            60% {
+                transform: scale(0.9);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .journey-section h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: #ff6b81;
+            margin-bottom: 20px;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .journey-image {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .journey-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .letter-page {
+            background: linear-gradient(to right, #ffe5e9, #ffedf0);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 20px;
+            max-width: 600px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .letter-page h1 {
+            font-size: 2.5rem;
+            color: #ff4757;
+            margin-bottom: 20px;
+        }
+
+        .letter-page p {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: #555;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInParagraphs 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeInParagraphs {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .letter-page p:nth-child(2) { animation-delay: 0.5s; }
+        .letter-page p:nth-child(3) { animation-delay: 1s; }
+        .letter-page p:nth-child(4) { animation-delay: 1.5s; }
+        .letter-page p:nth-child(5) { animation-delay: 2s; }
+        .letter-page p:nth-child(6) { animation-delay: 2.5s; }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <!-- Initial content -->
+        <h1>Suno ❤️</h1>
+        <button onclick="loadSecondPage()">Haa Bolo? 😍</button>
+    </div>
+
+    <script>
+        function loadSecondPage() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <h1>Tum bohoooooot cute ho 🥰</h1>
+                <button onclick="loadThirdPage()">Kon hum?🤨</button>
+            `;
+        }
+
+        function loadThirdPage() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <h1>Or smart bhi ho 😉</h1>
+                <button onclick="loadFourthPage()">Tum bolti ho to maan lete hai 😅</button>
+            `;
+        }
+
+        function loadFourthPage() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <h1>Tum samajh rhe ho na? 🧐</h1>
+                <div class="button-group">
+                    <button onclick="yesResponse()">Haan Haan 💕</button>
+                    <button onclick="noResponse()">Naaaah 🤭</button>
+                </div>
+            `;
+        }
+
+        function yesResponse() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <h1>Dekho bole the na samjhdar to tum ho 😛</h1>
+                <button onclick="loadImagesPage()">Yesssssssss babe 😍</button>
+            `;
+        }
+
+        function loadImagesPage() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <div class="journey-section">
+                    <h1>a little of our journey in two images, a lot to cover 🧿♾️</h1>
+                    <div class="image-gallery">
+                        <img src="/Users/simran/Downloads/Farewell.jpeg" alt="Image 1" class="journey-image">
+                        <img src="/Users/simran/Downloads/IMG_1767.JPG" alt="Image 2" class="journey-image">
+                    </div>
+                </div>
+                <button onclick="loadFinalPage()">Move Forward ❤️</button>
+            `;
+        }
+
+        function loadFinalPage() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <div class="letter-page">
+                    <h1>My Love,</h1>
+                      <p>
+                    Happy 5th Anniversary! Five years—a milestone that feels like a lifetime and yet, like we’re just getting started. 
+                    These years with you have been the most beautiful, transformative, and meaningful of my life. It’s not just about the time 
+                    we’ve spent together, but the moments, the memories, and the growth we’ve shared. You’ve been my constant, my home, my everything.
+                </p>
+                <p>
+                    I can still feel the magic of our first trip to Banaras. Wandering the ghats with you, breathing in the serenity of that place, 
+                    I knew my life was changing. And that night—our first night together—there was something so natural, so comforting about it. 
+                    It wasn’t just about us being together; it was the start of something deeper, something I knew I never wanted to end.
+                </p>
+                <p>
+                    Then came that year of long distance - when you were in the academy and we couldn’t just be with each other whenever we wanted. 
+                    It was tough, wasn’t it? Those secret calls, the constant countdown to when we’d see each other again. But looking back, 
+                    it showed me how strong we are. Even with miles between us, you never stopped being my anchor. You made me feel loved, 
+                    every single day, even when you couldn’t be there physically.
+                </p>
+                <p>
+                    Of course, we’ve had our moments of miscommunication—those fights that weren’t really fights. We’ve had misunderstandings, moments where we struggled to find the right words. But even in those moments, you never stopped being my person. We never stopped finding our way back to each other. And I think that’s what makes us, us. We’re not perfect, but we’ve always been perfect for each other.
+                </p>
+                 <p>
+                    Through every phase of our lives, you’ve loved me so completely. You’ve seen me in my strongest moments and my weakest, and you’ve stood by me through it all. And I’ve seen you grow too—into someone even more incredible than the person I first fell in love with. Every version of you has been my favorite, and I know that will never change.
+                <p>
+                    So here we are, five years later. Looking back, I’m overwhelmed with gratitude for every memory we’ve made, and I’m so excited for the future we’re building together. Thank you for loving me the way you do—for being my partner, my best friend, my safe place. I don’t just love you; I’m in awe of you.
+                </p>
+                <p>
+                    Here’s to us—to Banaras, to our lovey dovey talks, to long-distance calls and the fights that brought us closer. Here’s to the life we’ve built and the forever we’re creating. I love you more than words will ever be able to express.
+                </p>
+
+                <h1>Tumhari, Puttu 🌹</h1>
+                    </p>
+                    <button onclick="propose()"> I love you more 🥰 💍</button>
+                </div>
+            `;
+        }
+
+        function propose() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <h1>WILL YOU MARRY ME? 💖</h1>
+                <div class="button-group">
+                    <button onclick="finalPage()">Soch kya rahe ho haan!!!😒</button>
+                    <button onclick="finalPage()">Hum to already married hai na ji👩‍❤️‍👨</button>
+                </div>
+            `;
+        }
+
+        function finalPage() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <div class="final-page">
+                    <h1 class="heart">💞 Happy Anniversary Babyyy 💞</h1>
+                    <p>
+                        I miss you a lot! I laaaav you loving me, my love. <br>
+                        Come soon!! 🥺❤️
+                    </p>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
